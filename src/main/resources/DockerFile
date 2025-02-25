@@ -1,0 +1,5 @@
+FROM openjdk:21
+COPY target/MyApp.jar /user/app
+WORKDIR /user/app
+EXPOSE 9090
+ENTRYPOINT [ "java","-jar","MyApp.jar" ]
